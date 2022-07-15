@@ -1,0 +1,351 @@
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+html {
+    font-family: 'PingFangTC', 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+body {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-overflow-scrolling: touch;
+    height: 100%;
+    background-color: #000000;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+    width: 0 !important;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+    color: #ffffff;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+main {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../images/bg-pc-use@2x.jpg");
+}
+
+.wrapper-container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    min-height: 100vh;
+}
+
+.nana-banner {
+    margin-right: 13px;
+    max-width: 470px;
+}
+
+.wrapper-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: auto;
+}
+
+.main-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main-title img {
+    margin-right: 54px;
+    height: auto;
+    max-width: 330px;
+    min-width: 231px;
+}
+
+.main-title p {
+    padding-top: 15px;
+    font-size: 26px;
+    text-align: end;
+}
+
+.main-title .mobile {
+    padding-top: 20px;
+    display: none;
+    font-size: 22px;
+}
+
+.qrcode {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.qrcode img {
+    margin-bottom: 15px;
+    max-width: 240px;
+    min-width: 168px;
+    border-radius: 15px;
+}
+
+.download {
+    width: 100%;
+}
+
+.download-links {
+    padding: 50px 26px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.download-links .download-link {
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    width: 100%;
+    height: 70px;
+    font-size: 24px;
+    /* color: #f8c236; */
+    background-image: linear-gradient(90deg, #F94D43, #B83CD7), linear-gradient(90deg, #F94D43, #B83CD7);
+    background-size: 100% 1.5px;
+    background-position: 0 0, 0 99%;
+    background-repeat: no-repeat;
+    border-left: 2px solid #F94D43;
+    border-right: 2px solid #B83CD7;
+    border-radius: 10px;
+}
+
+.download-links .download-link:hover,
+.download-links .download-link:active {
+    font-weight: 600;
+    background-size: 100%;
+}
+
+.download-links .download-link:first-of-type {
+    margin-top: 0;
+    margin-left: 0;
+}
+
+.download.mobile {
+    margin: 0 auto;
+    display: none;
+    max-width: 650px;
+}
+
+.download.mobile .download-links {
+    padding: 40px 0 30px;
+}
+
+.download.mobile .download-links .download-link {
+    height: 50px;
+    font-size: 18px;
+}
+
+.collection-link {
+    font-size: 20px;
+    text-align: center;
+    line-height: 1.3;
+}
+
+.collection-link a {
+    text-decoration: underline;
+}
+
+footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 25px 0;
+    width: 100%;
+    height: 90px;
+    font-size: 15px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+footer a {
+    cursor: pointer;
+}
+
+footer p:first-of-type {
+    padding-bottom: 10px;
+}
+
+@media screen and (max-width: 1024px) {
+    main {
+        background-image: url("../images/bg-pc-use@2x.jpg");
+    }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+    .wrapper-content {
+        padding-right: 15px;
+    }
+
+    .qrcode {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .wrapper-container {
+        padding-top: 200px;
+        max-width: 650px;
+        min-height: initial;
+    }
+
+    .nana-banner {
+        margin-left: 10px;
+        margin-right: 18px;
+        max-width: 282px;
+    }
+
+    .wrapper-content {
+        padding-right: 10px;
+    }
+
+    .main-container {
+        flex-direction: column;
+    }
+
+    .main-title img {
+        margin-right: initial;
+    }
+
+    .main-title p {
+        text-align: center;
+    }
+
+    .qrcode {
+        margin-top: 30px;
+        margin-left: 0;
+    }
+
+    .download.desktop {
+        display: none;
+    }
+
+    .download.mobile {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    main {
+        background-image: url("../images/bg-mobile-use@2x.jpg");
+    }
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: calc(100% - 60px);
+    }
+
+    .wrapper-container {
+        padding-top: 0;
+    }
+
+    .nana-banner {
+        display: none;
+    }
+
+    .wrapper-content {
+        padding: 0 15px;
+    }
+
+    .main-title {
+        align-items: center;
+    }
+
+    .main-title img {
+        max-width: 220px;
+        min-width: initial;
+    }
+
+    .main-title .mobile {
+        display: flex;
+    }
+
+    .main-title p:first-of-type {
+        display: none;
+    }
+
+    .qrcode {
+        margin-top: 20px;
+    }
+
+    .qrcode img {
+        max-width: 170px;
+        min-width: initial;
+        border-radius: 10px;
+    }
+
+    .qrcode p {
+        margin-top: 5px;
+        font-size: 14px;
+    }
+
+    .download.mobile .download-links {
+        padding: 25px 0 30px;
+        flex-direction: column;
+    }
+
+    .download-links .download-link {
+        margin-top: 10px;
+        margin-left: 0;
+        flex: auto;
+        max-width: 250px;
+        /* border: 1px solid #f8c236; */
+        background-size: 100% 1.2px;
+        border-left: 1.8px solid #F94D43;
+        border-right: 1.8px solid #B83CD7;
+    }
+
+    .download-links .download-link:hover,
+    .download-links .download-link:active {
+        padding: 1px;
+    }
+
+    .collection-link {
+        font-size: 12px;
+    }
+
+    footer {
+        padding: 14px 0;
+        height: 60px;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    body {
+        position: relative;
+        height: calc(100vh + 115px);
+    }
+}
